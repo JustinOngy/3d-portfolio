@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { fs, haighs, freelance, ga } from "../assets/images";
 import {
   car,
   contact,
@@ -111,11 +111,11 @@ export const skills = [
 
 export const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Customer Service Representative",
+    company_name: "Haigh's Chocolates",
+    icon: haighs,
     iconBg: "#accbe1",
-    date: "March 2020 - April 2021",
+    date: "March 2020 - March 2024",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -124,42 +124,41 @@ export const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Software Engineer Immersive",
+    company_name: "General Assembly",
+    icon: ga,
     iconBg: "#fbc3bc",
     date: "Jan 2021 - Feb 2022",
     points: [
+      "Completed a full stack web development course, implementing modern technologies such as Node.Js, React, CSS, HTML, Express and SQL Databases",
+      "Engaged in over 500 hours of coding, proactive problem solving, refactoring my (and others) code as well as pair programming",
       "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title:
+      "Frontend Developer Virtual Internship                                                                                                     ",
+    company_name: "Frontend Simplified",
+    icon: fs,
+    iconBg: "#b7e4c7",
+    date: "Jan 2022 - Jan 2023",
+    points: [
+      "Transformed a static HTML, CSS JavaScript and React single page application into an interactive user interface using animations, transitions, and carousels.",
+      "Processed API requests with Axios to represent data from a cloud server and represented it through skeleton loading states, pagination, and dynamic routing.",
     ],
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#b7e4c7",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    company_name: "Freelance",
+    icon: freelance,
     iconBg: "#a2d2ff",
-    date: "Jan 2023 - Present",
+    date: "Jan 2022 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Delivered professional websites using HTML5, CSS3 (+ SCSS, BEM), JavaScript and React best practises",
+      "Engineered scalable, responsive, multi-platform and SEO friendly websites for multiple clients using HTML5, CSS3 + BEM, JavaScript ES6+ and React best practises",
+      "Included SEO, responsive, multi-platform and hosting support, enabling their website to be used by any browser or device in the world.",
     ],
   },
 ];
@@ -186,18 +185,20 @@ export const projects = [
   {
     iconUrl: pricewise,
     theme: "btn-back-red",
-    name: "Amazon Price Tracker",
+    name: "Zoomify: Video Calling App",
     description:
-      "Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.",
-    link: "https://github.com/adrianhajdin/pricewise",
+      "Zoomify is a web application designed for managing meetings and calls, powered by Next.js and integrated with the Clerk authentication service. Users can effortlessly schedule, join, and view meetings, as well as access recordings with ease.",
+    link: "zoomify-dun.vercel.app/",
+    github: "https://github.com/JustinOngy/zoomify",
   },
   {
     iconUrl: threads,
     theme: "btn-back-green",
-    name: "Full Stack Threads Clone",
+    name: "Full Stack Twitter Clone",
     description:
-      'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-    link: "https://github.com/adrianhajdin/threads",
+      'Created a full-stack replica of the popular discussion platform "Twitter," enabling users to post and engage in twitter conversations.',
+    link: "twitter-clone-one-mauve.vercel.app",
+    github: "https://github.com/JustinOngy/twitter-clone",
   },
   {
     iconUrl: car,
@@ -205,30 +206,25 @@ export const projects = [
     name: "Car Finding App",
     description:
       "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
-    link: "https://github.com/adrianhajdin/project_next13_car_showcase",
+    link: "https://github.com/JustinOngy/car-hire",
+    github: "https://car-hire-eta.vercel.app/",
   },
   {
     iconUrl: snapgram,
     theme: "btn-back-pink",
-    name: "Full Stack Instagram Clone",
+    name: "Blackjack Game",
     description:
-      "Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.",
-    link: "https://github.com/adrianhajdin/social_media_app",
+      "Blackjack game, designed to provide an immersive and engaging experience right in your browser. This project is built using a combination of HTML, CSS, and JavaScript, with a primary focus on DOM manipulation for an interactive playthrough.",
+    link: "justinongy.github.io/Project-1-blackjack/",
+    github: "https://github.com/JustinOngy/Project-1-blackjack",
   },
   {
     iconUrl: estate,
     theme: "btn-back-black",
-    name: "Real-Estate Application",
+    name: "GPT-3 ",
     description:
-      "Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.",
+      "Project GPT-3 Frontend Design. This project focuses on creating a visually appealing and interactive frontend using CSS and JavaScript to implement various tricks such as type animations, mouse movement effects, and more.",
     link: "https://github.com/adrianhajdin/projects_realestate",
-  },
-  {
-    iconUrl: summiz,
-    theme: "btn-back-yellow",
-    name: "AI Summarizer Application",
-    description:
-      "App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.",
-    link: "https://github.com/adrianhajdin/project_ai_summarizer",
+    github: "",
   },
 ];

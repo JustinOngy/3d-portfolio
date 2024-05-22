@@ -3,10 +3,12 @@ import { projects } from "../constants/";
 import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
 import CTA from "../components/CTA";
-const Projects = () => {
+const Projects = ({ isDarkMode }) => {
+  const darkModeText = isDarkMode ? "text-white" : "text-black";
+
   return (
     <section className="max-container">
-      <h1 className="head-text">
+      <h1 className={`head-text ${darkModeText}`}>
         My{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
           Projects
@@ -31,11 +33,24 @@ const Projects = () => {
             </div>
 
             <div className="mt-5 flex flex-col">
-              <h4 className="text-2xl font-poppins font-semibold">
+              <h4
+                className={`text-2xl font-poppins font-semibold  ${darkModeText}`}>
                 {project.name}
               </h4>
               <p className="mt-2 text-slate-500">{project.description}</p>
               <div className="mt-5 flex items-center gap-2 font-poppins">
+                <Link
+                  to={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-gray-600">
+                  Github
+                </Link>
+                <img
+                  src={arrow}
+                  alt="arrow"
+                  className="w-4 h-4 object-contain"
+                />
                 <Link
                   to={project.link}
                   target="_blank"
@@ -43,11 +58,6 @@ const Projects = () => {
                   className="font-semibold text-blue-600">
                   Live Link
                 </Link>
-                <img
-                  src={arrow}
-                  alt="arrow"
-                  className="w-4 h-4 object-contain"
-                />
               </div>
             </div>
           </div>

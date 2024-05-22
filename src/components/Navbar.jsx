@@ -1,10 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { night } from "../assets/icons/";
+import { night, day } from "../assets/icons/";
 
-export const Navbar = () => {
+export const Navbar = ({ isDarkMode, toggleNightMode }) => {
+  const linkTextColor = isDarkMode ? "text-white" : "text-black";
+
   return (
-    <header className="header">
+    <header className="header flex items-center justify-between p-4">
       <NavLink
         to="/"
         className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
@@ -14,25 +16,27 @@ export const Navbar = () => {
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-black"
+            isActive ? "text-blue-500" : linkTextColor
           }>
           About
         </NavLink>
         <NavLink
           to="/projects"
           className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-black"
+            isActive ? "text-blue-500" : linkTextColor
           }>
           Projects
         </NavLink>
         <NavLink
           to="/contact"
           className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-black"
+            isActive ? "text-blue-500" : linkTextColor
           }>
           Contact
         </NavLink>
-        <img src={night} className="w-8 h-8" />
+        <button onClick={toggleNightMode}>
+          <img src={isDarkMode ? day : night} className="w-8 h-8" alt="Mode" />
+        </button>
       </nav>
     </header>
   );

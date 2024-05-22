@@ -6,7 +6,7 @@ import { Fox } from "../models";
 import useAlert from "../hooks/useAlert";
 import { Alert, Loader } from "../components";
 
-const Contact = () => {
+const Contact = ({ isDarkMode }) => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const { alert, showAlert, hideAlert } = useAlert();
@@ -54,7 +54,7 @@ const Contact = () => {
             email: "",
             message: "",
           });
-        }, [3000]);
+        }, 3000);
       })
       .catch((error) => {
         setLoading(false);
@@ -74,13 +74,18 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
 
       <div className="flex-1 min-w-[50%] flex flex-col">
-        <h1 className="head-text">Get in Touch</h1>
+        <h1 className={`head-text ${isDarkMode ? "text-white" : "text-black"}`}>
+          Get in Touch
+        </h1>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
           className="w-full flex flex-col gap-7 mt-14">
-          <label className="text-black-500 font-semibold">
+          <label
+            className={`${
+              isDarkMode ? "text-white" : "text-black-500"
+            } font-semibold`}>
             Name
             <input
               type="text"
@@ -94,7 +99,10 @@ const Contact = () => {
               onBlur={handleBlur}
             />
           </label>
-          <label className="text-black-500 font-semibold">
+          <label
+            className={`${
+              isDarkMode ? "text-white" : "text-black-500"
+            } font-semibold`}>
             Email
             <input
               type="email"
@@ -108,7 +116,10 @@ const Contact = () => {
               onBlur={handleBlur}
             />
           </label>
-          <label className="text-black-500 font-semibold">
+          <label
+            className={`${
+              isDarkMode ? "text-white" : "text-black-500"
+            } font-semibold`}>
             Your Message
             <textarea
               name="message"

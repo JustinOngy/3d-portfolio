@@ -7,20 +7,23 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import CTA from "../components/CTA";
 
-const About = () => {
+const About = ({ isDarkMode }) => {
+  const darkModeText = isDarkMode ? "text-white" : "text-black";
+  const darkModeDate = isDarkMode ? "text-gray-300" : "text-gray-700";
+
   return (
     <section className="max-container">
-      <h1 className="head-text">
+      <h1 className={`head-text ${darkModeText}`}>
         Hello, I'm{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
           Justin
         </span>
       </h1>
-      <div className="mt-5 flex flex-col gap3 text-slate-500">
+      <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>Software engineer based in Sydney, Australia </p>
       </div>
       <div className="py-10 flex flex-col">
-        <h3 className="subhead-text">My Skills</h3>
+        <h3 className={`subhead-text ${darkModeText}`}>My Skills</h3>
         <div className="mt-16 flex flex-wrap gap-12">
           {skills.map((skill) => (
             <div className="block-container w-20 h-20" key={skill.name}>
@@ -37,7 +40,7 @@ const About = () => {
         </div>
       </div>
       <div className="py-16">
-        <h3 className="subhead-text">Work Experience.</h3>
+        <h3 className={`subhead-text ${darkModeText}`}>Work Experience.</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
             I've worked with all sorts of companies, leveling up my skills and
@@ -50,7 +53,7 @@ const About = () => {
             {experiences.map((experience, index) => (
               <VerticalTimelineElement
                 key={experience.company_name}
-                date={experience.date}
+                date={<span className={darkModeDate}>{experience.date}</span>}
                 iconStyle={{ background: experience.iconBg }}
                 icon={
                   <div className="flex justify-center items-center w-full h-full">
@@ -68,11 +71,12 @@ const About = () => {
                   boxShadow: "none",
                 }}>
                 <div>
-                  <h3 className="text-black text-xl font-poppins font-semibold">
+                  <h3
+                    className={`text-xl font-poppins font-semibold ${darkModeText}`}>
                     {experience.title}
                   </h3>
                   <p
-                    className="text-black-500 font-medium text-base"
+                    className={`font-medium text-base ${darkModeText}`}
                     style={{ margin: 0 }}>
                     {experience.company_name}
                   </p>
