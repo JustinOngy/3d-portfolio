@@ -206,8 +206,8 @@ export const projects = [
     name: "Car Finding App",
     description:
       "Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.",
-    link: "https://github.com/JustinOngy/car-hire",
-    github: "https://car-hire-eta.vercel.app/",
+    link: "https://car-hire-eta.vercel.app/",
+    github: "https://github.com/JustinOngy/car-hire",
   },
   {
     iconUrl: snapgram,
@@ -224,7 +224,7 @@ export const projects = [
     name: "GPT-3 ",
     description:
       "Project GPT-3 Frontend Design. This project focuses on creating a visually appealing and interactive frontend using CSS and JavaScript to implement various tricks such as type animations, mouse movement effects, and more.",
-    link: "https://github.com/adrianhajdin/projects_realestate",
-    github: "",
+    link: "https://gpt-3-6s9bujmi0-justinongy.vercel.app/",
+    github: "https://github.com/JustinOngy/gpt-3",
   },
 ];
